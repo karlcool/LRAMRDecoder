@@ -443,14 +443,6 @@ NSData *EncodePCMToAMR(char *data, int maxLen,int nChannels, int nBitsPerSample)
     }
 	
 	Encoder_Interface_exit(enstate);
-	
-#ifdef DEBUG
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath = [paths objectAtIndex:0];
-    NSString *wavFile = [documentPath stringByAppendingPathComponent:[NSString stringWithFormat:@"88.amr"]];
-    [out writeToFile:wavFile atomically:YES];
-#endif
-    
 	return out;
 }
 
@@ -496,12 +488,7 @@ int SkipCaffHead(char *buf) {
 // 此处将一个录制的pcm直接转换为amr格式
 // 调用方式为 EncodeWAVEToAMR(pcmData, 1, 16)
 NSData *EncodeWAVEToAMR(NSData *data, int nChannels, int nBitsPerSample) {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentPath = [paths objectAtIndex:0];
-    NSString *wavFile = [documentPath stringByAppendingPathComponent:[NSString stringWithFormat:@"11.caf"]];
-    
     if (!data) {
-        // data = [NSData dataWithContentsOfFile:wavFile];
         return nil;
     }
     
