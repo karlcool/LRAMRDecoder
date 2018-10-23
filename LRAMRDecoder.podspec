@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/karlcool/LRAMRDecoder"
   s.license      = "MIT"
   s.author       = { "yanzhi.liu" => "karlcool.l@qq.com" }
-  s.platform     = :ios
   s.source       = { :git => "https://github.com/karlcool/LRAMRDecoder.git", :tag => "#{s.version}" }
   s.source_files        = 'Class/*.{h,m,swift}'
   s.public_header_files = 'Class/*.h' 
