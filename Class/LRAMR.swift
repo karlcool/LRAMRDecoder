@@ -1,6 +1,6 @@
 //
-//  LRAMR.swift
-//  LRAMR
+//  LRAMRDecoder.swift
+//  LRAMRDecoder
 //
 //  Created by 刘彦直 on 2018/9/21.
 //  Copyright © 2018年 刘彦直. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct LRAMR {
+public struct LRAMRDecoder {
     public static func decodeAMRToWAVE(_ data: Data) -> Data {
         return DecodeAMRToWAVE(data)
     }
