@@ -9,11 +9,11 @@
 import Foundation
 
 public struct LRAMRDecoder {
-    public static func decodeAMRToWAVE(_ data: Data) -> Data {
+    public static func decodeAMRToWAVE(_ data: Data) -> Data? {
         return DecodeAMRToWAVE(data)
     }
 
-    public static func encodeWAVEToAMR(_ data: Data, channels: Int, bitsPerSample: Int) -> Data {
+    public static func encodeWAVEToAMR(_ data: Data, channels: Int, bitsPerSample: Int) -> Data? {
         return EncodeWAVEToAMR(data, Int32(channels), Int32(bitsPerSample))
     }
 }

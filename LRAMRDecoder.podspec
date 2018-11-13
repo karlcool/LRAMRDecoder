@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LRAMRDecoder"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.platform     = :ios, "9.0"
   s.summary      = "只是一个libopencore-amrnb的封装"
   s.description  = "只是一个libopencore-amrnb的封装"
